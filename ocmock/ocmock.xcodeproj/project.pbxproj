@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAD20B8215CC8A7400D8D338 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD20B8115CC8A7400D8D338 /* Cocoa.framework */; };
+		FAD20B8C15CC8A7400D8D338 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAD20B8A15CC8A7400D8D338 /* InfoPlist.strings */; };
+		FAD20BA015CC8AAE00D8D338 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD20B9F15CC8AAE00D8D338 /* SenTestingKit.framework */; };
+		FAD20BA115CC8AAE00D8D338 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD20B8115CC8A7400D8D338 /* Cocoa.framework */; };
+		FAD20BA715CC8AAE00D8D338 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAD20BA515CC8AAE00D8D338 /* InfoPlist.strings */; };
+		FAD20BB615CC8B4E00D8D338 /* OCMOCKRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD20BB415CC8B4E00D8D338 /* OCMOCKRepository.h */; };
+		FAD20BB715CC8B4E00D8D338 /* OCMOCKRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20BB515CC8B4E00D8D338 /* OCMOCKRepository.m */; };
+		FAD20BBA15CC8D6900D8D338 /* OCMOCKStubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20BB915CC8D6900D8D338 /* OCMOCKStubTests.m */; };
+		FAD20BBB15CC8DAB00D8D338 /* OCMOCKRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20BB515CC8B4E00D8D338 /* OCMOCKRepository.m */; };
+		FAD20BBD15CC924100D8D338 /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD20BBC15CC924100D8D338 /* libobjc.dylib */; };
+		FAD20BC015CCA1BD00D8D338 /* NSObject-Mock.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD20BBE15CCA1BD00D8D338 /* NSObject-Mock.h */; };
+		FAD20BC115CCA1BD00D8D338 /* NSObject-Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20BBF15CCA1BD00D8D338 /* NSObject-Mock.m */; };
+		FAD20BC215CCA1BF00D8D338 /* NSObject-Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20BBF15CCA1BD00D8D338 /* NSObject-Mock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FAD20B7E15CC8A7400D8D338 /* ocmock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ocmock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD20B8115CC8A7400D8D338 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAD20B8415CC8A7400D8D338 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FAD20B8515CC8A7400D8D338 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FAD20B8615CC8A7400D8D338 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAD20B8915CC8A7400D8D338 /* ocmock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ocmock-Info.plist"; sourceTree = "<group>"; };
+		FAD20B8B15CC8A7400D8D338 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAD20B8D15CC8A7400D8D338 /* ocmock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ocmock-Prefix.pch"; sourceTree = "<group>"; };
+		FAD20B9E15CC8AAE00D8D338 /* ocmock-tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ocmock-tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD20B9F15CC8AAE00D8D338 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAD20BA415CC8AAE00D8D338 /* ocmock-tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ocmock-tests-Info.plist"; sourceTree = "<group>"; };
+		FAD20BA615CC8AAE00D8D338 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAD20BAB15CC8AAE00D8D338 /* ocmock-tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ocmock-tests-Prefix.pch"; sourceTree = "<group>"; };
+		FAD20BB415CC8B4E00D8D338 /* OCMOCKRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMOCKRepository.h; sourceTree = "<group>"; };
+		FAD20BB515CC8B4E00D8D338 /* OCMOCKRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMOCKRepository.m; sourceTree = "<group>"; };
+		FAD20BB815CC8D6900D8D338 /* OCMOCKStubTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMOCKStubTests.h; sourceTree = "<group>"; };
+		FAD20BB915CC8D6900D8D338 /* OCMOCKStubTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMOCKStubTests.m; sourceTree = "<group>"; };
+		FAD20BBC15CC924100D8D338 /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
+		FAD20BBE15CCA1BD00D8D338 /* NSObject-Mock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Mock.h"; sourceTree = "<group>"; };
+		FAD20BBF15CCA1BD00D8D338 /* NSObject-Mock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Mock.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAD20B7A15CC8A7400D8D338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BBD15CC924100D8D338 /* libobjc.dylib in Frameworks */,
+				FAD20B8215CC8A7400D8D338 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD20B9A15CC8AAE00D8D338 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BA015CC8AAE00D8D338 /* SenTestingKit.framework in Frameworks */,
+				FAD20BA115CC8AAE00D8D338 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAD20B7215CC8A7300D8D338 = {
+			isa = PBXGroup;
+			children = (
+				FAD20B8715CC8A7400D8D338 /* ocmock */,
+				FAD20BA215CC8AAE00D8D338 /* ocmock-tests */,
+				FAD20B8015CC8A7400D8D338 /* Frameworks */,
+				FAD20B7F15CC8A7400D8D338 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAD20B7F15CC8A7400D8D338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20B7E15CC8A7400D8D338 /* ocmock.framework */,
+				FAD20B9E15CC8AAE00D8D338 /* ocmock-tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAD20B8015CC8A7400D8D338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20BBC15CC924100D8D338 /* libobjc.dylib */,
+				FAD20B8115CC8A7400D8D338 /* Cocoa.framework */,
+				FAD20B9F15CC8AAE00D8D338 /* SenTestingKit.framework */,
+				FAD20B8315CC8A7400D8D338 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD20B8315CC8A7400D8D338 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20B8415CC8A7400D8D338 /* AppKit.framework */,
+				FAD20B8515CC8A7400D8D338 /* CoreData.framework */,
+				FAD20B8615CC8A7400D8D338 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		FAD20B8715CC8A7400D8D338 /* ocmock */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20B8815CC8A7400D8D338 /* Supporting Files */,
+				FAD20BB415CC8B4E00D8D338 /* OCMOCKRepository.h */,
+				FAD20BB515CC8B4E00D8D338 /* OCMOCKRepository.m */,
+				FAD20BBE15CCA1BD00D8D338 /* NSObject-Mock.h */,
+				FAD20BBF15CCA1BD00D8D338 /* NSObject-Mock.m */,
+			);
+			path = ocmock;
+			sourceTree = "<group>";
+		};
+		FAD20B8815CC8A7400D8D338 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20B8915CC8A7400D8D338 /* ocmock-Info.plist */,
+				FAD20B8A15CC8A7400D8D338 /* InfoPlist.strings */,
+				FAD20B8D15CC8A7400D8D338 /* ocmock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD20BA215CC8AAE00D8D338 /* ocmock-tests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20BA315CC8AAE00D8D338 /* Supporting Files */,
+				FAD20BB815CC8D6900D8D338 /* OCMOCKStubTests.h */,
+				FAD20BB915CC8D6900D8D338 /* OCMOCKStubTests.m */,
+			);
+			path = "ocmock-tests";
+			sourceTree = "<group>";
+		};
+		FAD20BA315CC8AAE00D8D338 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD20BA415CC8AAE00D8D338 /* ocmock-tests-Info.plist */,
+				FAD20BA515CC8AAE00D8D338 /* InfoPlist.strings */,
+				FAD20BAB15CC8AAE00D8D338 /* ocmock-tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FAD20B7B15CC8A7400D8D338 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BB615CC8B4E00D8D338 /* OCMOCKRepository.h in Headers */,
+				FAD20BC015CCA1BD00D8D338 /* NSObject-Mock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FAD20B7D15CC8A7400D8D338 /* ocmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD20B9315CC8A7400D8D338 /* Build configuration list for PBXNativeTarget "ocmock" */;
+			buildPhases = (
+				FAD20B7915CC8A7400D8D338 /* Sources */,
+				FAD20B7A15CC8A7400D8D338 /* Frameworks */,
+				FAD20B7B15CC8A7400D8D338 /* Headers */,
+				FAD20B7C15CC8A7400D8D338 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ocmock;
+			productName = ocmock;
+			productReference = FAD20B7E15CC8A7400D8D338 /* ocmock.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAD20B9D15CC8AAE00D8D338 /* ocmock-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD20BAE15CC8AAE00D8D338 /* Build configuration list for PBXNativeTarget "ocmock-tests" */;
+			buildPhases = (
+				FAD20B9915CC8AAE00D8D338 /* Sources */,
+				FAD20B9A15CC8AAE00D8D338 /* Frameworks */,
+				FAD20B9B15CC8AAE00D8D338 /* Resources */,
+				FAD20B9C15CC8AAE00D8D338 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ocmock-tests";
+			productName = "ocmock-tests";
+			productReference = FAD20B9E15CC8AAE00D8D338 /* ocmock-tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAD20B7415CC8A7300D8D338 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Tobias Patton";
+			};
+			buildConfigurationList = FAD20B7715CC8A7300D8D338 /* Build configuration list for PBXProject "ocmock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FAD20B7215CC8A7300D8D338;
+			productRefGroup = FAD20B7F15CC8A7400D8D338 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAD20B7D15CC8A7400D8D338 /* ocmock */,
+				FAD20B9D15CC8AAE00D8D338 /* ocmock-tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAD20B7C15CC8A7400D8D338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20B8C15CC8A7400D8D338 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD20B9B15CC8AAE00D8D338 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BA715CC8AAE00D8D338 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAD20B9C15CC8AAE00D8D338 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAD20B7915CC8A7400D8D338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BB715CC8B4E00D8D338 /* OCMOCKRepository.m in Sources */,
+				FAD20BC115CCA1BD00D8D338 /* NSObject-Mock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD20B9915CC8AAE00D8D338 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD20BBA15CC8D6900D8D338 /* OCMOCKStubTests.m in Sources */,
+				FAD20BBB15CC8DAB00D8D338 /* OCMOCKRepository.m in Sources */,
+				FAD20BC215CCA1BF00D8D338 /* NSObject-Mock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAD20B8A15CC8A7400D8D338 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD20B8B15CC8A7400D8D338 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAD20BA515CC8AAE00D8D338 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD20BA615CC8AAE00D8D338 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAD20B9115CC8A7400D8D338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FAD20B9215CC8A7400D8D338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FAD20B9415CC8A7400D8D338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocmock/ocmock-Prefix.pch";
+				INFOPLIST_FILE = "ocmock/ocmock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		FAD20B9515CC8A7400D8D338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocmock/ocmock-Prefix.pch";
+				INFOPLIST_FILE = "ocmock/ocmock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		FAD20BAC15CC8AAE00D8D338 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocmock-tests/ocmock-tests-Prefix.pch";
+				INFOPLIST_FILE = "ocmock-tests/ocmock-tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FAD20BAD15CC8AAE00D8D338 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ocmock-tests/ocmock-tests-Prefix.pch";
+				INFOPLIST_FILE = "ocmock-tests/ocmock-tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAD20B7715CC8A7300D8D338 /* Build configuration list for PBXProject "ocmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD20B9115CC8A7400D8D338 /* Debug */,
+				FAD20B9215CC8A7400D8D338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD20B9315CC8A7400D8D338 /* Build configuration list for PBXNativeTarget "ocmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD20B9415CC8A7400D8D338 /* Debug */,
+				FAD20B9515CC8A7400D8D338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD20BAE15CC8AAE00D8D338 /* Build configuration list for PBXNativeTarget "ocmock-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD20BAC15CC8AAE00D8D338 /* Debug */,
+				FAD20BAD15CC8AAE00D8D338 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAD20B7415CC8A7300D8D338 /* Project object */;
+}
