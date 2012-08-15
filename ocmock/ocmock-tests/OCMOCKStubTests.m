@@ -9,10 +9,11 @@
 #import "OCMOCKStubTests.h"
 #import "OCMOCKRepository.h"
 #import "OCMOCKExpectation.h"
+#import "OCMOCKStub.h"
 
 @interface StubTestClassToStub : NSObject
 - (id) methodReturnsId;
-- (int) methodTakesIntReturnsInt: (int) val;
+- (id) methodTakesIntReturnsId: (int) val;
 - (char) methodTakesInt: (int)i andFloatReturnsChar: (float) val;
 @end
 
@@ -22,9 +23,9 @@
     return [NSString string];
 }
 
-- (int) methodTakesIntReturnsInt: (int) val
+- (id) methodTakesIntReturnsId: (int) val
 {
-    return val * 2;
+    return @"goodbye world";
 }
 - (char) methodTakesInt: (int)i andFloatReturnsChar: (float) val;
 {
@@ -40,26 +41,52 @@
     STAssertNotNil(stub, @"Mock repositor return nil stub for %@", NSStringFromClass([StubTestClassToStub class]));
 }
 
-//- (void) testStubMethodsReturnsDefaultValue
-//{
-//    StubTestClassToStub *stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
-//    int r1 = [stub methodTakesIntReturnsInt:5];
-//    STAssertEquals(0, r1, @"Stub method did not return default value");
-//    
-//    char r2 = [stub methodTakesInt:5 andFloatReturnsChar:2.0];
-//    STAssertEquals((char)'\0', r2, @"Stub method did not return default value");
-//    
-//    id r3 = [stub methodReturnsId];
-//    STAssertNil(r3, @"Method that returns id did not return nil");
-//}
+- (void) testStubMethodsReturnsDefaultValue
+{
+    StubTestClassToStub *stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
+    
+    char r2 = [stub methodTakesInt:5 andFloatReturnsChar:2.0];
+    STAssertEquals((char)'\0', r2, @"Stub method did not return default value");
+    
+    id r3 = [stub methodReturnsId];
+    STAssertNil(r3, @"Method that returns id did not return nil");
+}
 
 - (void) testExcpectation
 {
-    StubTestClassToStub *stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
-    [[[stub expect] methodReturnsId] returns:@"hello world"];
+    NSString *mockResult = @"mock NSString result";
+    id stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
+    [[[stub expect] methodReturnsId] returns:mockResult];
     
     id result = [stub methodReturnsId];
-    STAssertEqualObjects(result, @"hello world", @"Expectation on stub did not return correct value");
+    STAssertEqualObjects(result, mockResult, @"Expectation on stub did not return correct value");
+}
+
+- (void) testIgnoreArguments
+{
+    NSString *mockResult = @"mock NSString result";
+    const int mockIntArg = 22;
+    
+    id  stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
+    [[[[stub expect] methodTakesIntReturnsId:mockIntArg] returns:mockResult] ignoreArguments];
+    
+    id result = [stub methodTakesIntReturnsId:5];
+    STAssertEqualObjects(result, mockResult, @"Expectation on stub did not return correct value");
+}
+
+- (void) testExpectationWithArguments
+{
+    NSString *mockResult = @"mock NSString result";
+    const int mockIntArg = 22;
+    
+    id  stub = [OCMOCKRepository generateStubForClass: [StubTestClassToStub class]];
+    [[[stub expect] methodTakesIntReturnsId:mockIntArg] returns:mockResult];
+    
+    id result = [stub methodTakesIntReturnsId:mockIntArg];
+    STAssertEqualObjects(result, mockResult, @"Expectation on stub did not return correct value");
+    
+    id resultWithIncorrectArg = [stub methodTakesIntReturnsId:0];
+    STAssertNil(resultWithIncorrectArg, @"Expectation on stub did not return default value when incorrect argument passed");
 }
 
 @end

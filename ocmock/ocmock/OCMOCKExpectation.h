@@ -12,8 +12,10 @@
 
 @property (nonatomic, retain) id target;
 @property (nonatomic, retain) NSInvocation *invocation;
+@property (nonatomic, assign) BOOL isIgnoreArgument;
 
-- (id) initWithTarget:(id)target;
-- (void) returns:(id)value;
+- (id) initWithTarget:(id)aTarget;
+- (OCMOCKExpectation *) returns:(id)value;
+- (OCMOCKExpectation *) ignoreArguments;
 
 @end

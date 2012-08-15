@@ -11,11 +11,16 @@
 
 @implementation OCMOCKExpectation
 
-- (id) initWithTarget: (id)target
+@synthesize target;
+@synthesize invocation;
+@synthesize isIgnoreArgument;
+
+- (id) initWithTarget: (id)aTarget
 {
     if(self = [super init])
     {
-        self.target = target;
+        self.target = aTarget;
+        self.isIgnoreArgument = FALSE;
     }
     return self;
 }
@@ -31,7 +36,7 @@
     return [self.target methodSignatureForSelector:aSelector];
 }
 
-- (void) returns: (id)value
+- (OCMOCKExpectation *) returns: (id)value
 {
     [self.invocation setReturnValue:&value];
     if([self.target isKindOfClass:[OCMOCKStub class]])
@@ -42,6 +47,14 @@
     {
         NSLog(@"*** Attempting to set expecation on object that's not an OCMOCKStub");
     }
+    
+    return self;
+}
+
+- (OCMOCKExpectation *) ignoreArguments
+{
+    self.isIgnoreArgument = TRUE;
+    return self;
 }
 
 @end
